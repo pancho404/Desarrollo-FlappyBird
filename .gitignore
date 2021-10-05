@@ -32,7 +32,9 @@
 *.app
 
 # Visual Studio 
+*.suo
 *.VC
+*.VC.db
 *.VC.db-shm
 *.VC.db-wal
 *.VC.opendb

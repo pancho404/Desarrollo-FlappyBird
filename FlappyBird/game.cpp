@@ -10,7 +10,6 @@ void playGame()
 		switch (manager->getCurrentScene())
 		{
 		case Scene::MainMenu:
-
 			break;
 		case Scene::Credits:
 			break;
