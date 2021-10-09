@@ -14,8 +14,8 @@ public:
 	Rectangle getButtonRec();	
 	float getButtonWidth();
 	float getButtonHeight();
-	int getButtonX();
-	int getButtonY();
+	float getButtonX();
+	float getButtonY();
 	Color getButtonColor();
 	void drawButton();
 	bool isMouseOnButton();

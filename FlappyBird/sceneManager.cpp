@@ -1,12 +1,13 @@
 #include "sceneManager.h"
+#include "Credits.h"
 
 sceneManager::sceneManager()
 {
-	currentScene = Scene::MainMenu;
+	currentScene = Scene::MainMenu;	
 }
 sceneManager::~sceneManager()
 {
-
+	
 }
 Scene sceneManager::getCurrentScene()
 {

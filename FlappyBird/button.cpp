@@ -30,12 +30,12 @@ float Button::getButtonHeight()
 	return buttonRec.height;
 }
 
-int Button::getButtonX()
+float Button::getButtonX()
 {
 	return buttonRec.x;
 }
 
-int Button::getButtonY()
+float Button::getButtonY()
 {
 	return buttonRec.y;
 }
@@ -60,7 +60,7 @@ void Button::drawButton()
 
 bool Button::isMouseOnButton()
 {
-	if (CheckCollisionPointRec(GetMousePosition(),buttonRec))
+	if (CheckCollisionPointRec(GetMousePosition(), buttonRec))
 	{
 		return true;
 	}
@@ -72,7 +72,7 @@ bool Button::isMouseOnButton()
 
 bool Button::isButtonPressed()
 {
-	if (isMouseOnButton()&&IsMouseButtonDown(MOUSE_LEFT_BUTTON))
+	if (isMouseOnButton() && IsMouseButtonDown(MOUSE_LEFT_BUTTON))
 	{
 		return true;
 	}
