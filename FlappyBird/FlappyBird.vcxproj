@@ -153,12 +153,14 @@
     <ClCompile Include="Credits.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="sceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="button.h" />
     <ClInclude Include="Credits.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="sceneManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

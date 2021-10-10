@@ -5,31 +5,38 @@ void playGame()
 	const int windowWidth = 1280;
 	const int windowHeight = 720;
 	sceneManager* manager =  new sceneManager();
-	Credits* creditsScene = new Credits();	
-	bool MainMenuInited = false;
-	bool CreditsInited = false;
-	bool PlayInited = false;
-	manager->changeScene(Scene::Credits);
-
-	InitWindow(windowWidth, windowHeight, "Flappy Bird");
+	MainMenu* mainMenuScene = new MainMenu();
+	Credits* creditsScene = new Credits();
+	bool mainMenuInited = false;
+	bool creditsInited = false;
+	bool playInited = false;
+	manager->changeScene(Scene::MainMenu);
+	InitWindow(windowWidth, windowHeight, "Flappy Loli");
 	while (!WindowShouldClose())
 	{
 		switch (manager->getCurrentScene())
 		{
 		case Scene::MainMenu:
+			if (!mainMenuInited)
+			{
+				mainMenuScene->setSceneManager(manager);
+				mainMenuInited = true;
+			}
+			mainMenuScene->mainMenuUpdate();
+			mainMenuScene->mainMenuDraw();
 			break;
 		case Scene::Credits:
-			if (!CreditsInited)
-			{
+			if (!creditsInited)
+			{				
 				creditsScene->setSceneManager(manager);
-				CreditsInited = true;
+				creditsInited = true;
 			}
 			creditsScene->creditsUpdate();
-			BeginDrawing();
 			creditsScene->creditsDraw();
-			EndDrawing();
 			break;
 		case Scene::Play:
+			break;
+		case Scene::Exit:
 			break;
 		default:
 			break;
@@ -37,4 +44,5 @@ void playGame()
 	}
 	delete manager;
 	delete creditsScene;
+	delete mainMenuScene;
 }

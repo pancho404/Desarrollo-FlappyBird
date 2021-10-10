@@ -1,6 +1,6 @@
 #pragma once
 
-enum class Scene {MainMenu, Credits, Play};
+enum class Scene {MainMenu, Credits, Play, Exit};
 
 class sceneManager
 {

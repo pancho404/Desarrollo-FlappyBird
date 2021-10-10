@@ -72,7 +72,7 @@ bool Button::isMouseOnButton()
 
 bool Button::isButtonPressed()
 {
-	if (isMouseOnButton() && IsMouseButtonDown(MOUSE_LEFT_BUTTON))
+	if (isMouseOnButton() && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
 	{
 		return true;
 	}
