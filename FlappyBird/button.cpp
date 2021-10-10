@@ -12,7 +12,7 @@ Button::Button(float width, float height, int x, int y, Color buttonColor, Color
 
 Button::~Button()
 {
-
+	
 }
 
 Rectangle Button::getButtonRec()
