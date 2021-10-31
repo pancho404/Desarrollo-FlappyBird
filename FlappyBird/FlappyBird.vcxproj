@@ -154,15 +154,18 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
     <ClCompile Include="Play.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="sceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="assets.h" />
     <ClInclude Include="button.h" />
     <ClInclude Include="Credits.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Obstacle.h" />
     <ClInclude Include="Play.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="sceneManager.h" />

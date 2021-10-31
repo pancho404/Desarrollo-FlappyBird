@@ -1,23 +1,26 @@
 #pragma once
 #include "raylib.h"
+#include "assets.h"
 class Player
 {
 private:
 	Rectangle collider;
-	Texture2D avatar;
-	Vector2 pos;	
+	Texture2D avatar;		
+	float speed;
 public:
-	Player();
+	Player(float x, float y, float width, float height, float speed);
 	~Player();
-	void setPlayerAvatar(Texture2D avatar);
-	void setPlayerPos(Vector2 pos);
+	void setPlayerAvatar();	
 	void setPlayerCollider(float x, float y, float width, float height);
-	Texture2D getPlayerAvatar();
-	Vector2 getPlayerPos();
+	void setPlayerSpeed(float speed);
+	Texture2D getPlayerAvatar();	
+	Rectangle getPlayerRectangle();
 	float getPlayerColliderX();
 	float getPlayerColliderY();
 	float getPlayerColliderWidth();
 	float getPlayerColliderHeight();
+	float getPlayerSpeed();
 	void movePlayer();
+	void drawPlayer();
 };
 
